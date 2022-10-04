@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'
+import {Component, EventEmitter, Input, Output} from '@angular/core'
 
 @Component({
     selector: 'app-header',
@@ -6,4 +6,13 @@ import {Component} from '@angular/core'
 
 }
 ) 
-    export class HeaderComponent{}
+    export class HeaderComponent{
+        //testVar = 'YO';
+        // @Output() youClicked = new EventEmitter<string>()
+        // onClickyClick(){
+        //     this.youClicked.emit(this.testVar)
+        // }  ..custom event outputted from header to app
+
+        @Input() farts2: string;
+
+    }

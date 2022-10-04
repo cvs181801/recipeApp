@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipeApp';
+  farts2 = 'whoa';
+//   farts = 'hrm';
+//   onClickyClick(event: string){
+//     this.farts = event;
+// } ...custom event outputted from header to app
 }
