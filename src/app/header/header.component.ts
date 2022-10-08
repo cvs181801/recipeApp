@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core'
+import {Component, EventEmitter, Input, Output, OnInit} from '@angular/core'
 
 @Component({
     selector: 'app-header',
@@ -6,13 +6,17 @@ import {Component, EventEmitter, Input, Output} from '@angular/core'
 
 }
 ) 
-    export class HeaderComponent{
+    export class HeaderComponent implements OnInit {
         //testVar = 'YO';
         // @Output() youClicked = new EventEmitter<string>()
         // onClickyClick(){
         //     this.youClicked.emit(this.testVar)
         // }  ..custom event outputted from header to app
 
-        @Input() farts2: string;
+        @Input() receivedParentMsg: string;
+
+        ngOnInit() {
+            console.log(this.receivedParentMsg)
+        }
 
     }
